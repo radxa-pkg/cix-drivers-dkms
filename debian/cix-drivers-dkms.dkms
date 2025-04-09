@@ -1,0 +1,30 @@
+PACKAGE_NAME="cix-drivers-dkms"
+PACKAGE_VERSION="#MODULE_VERSION#"
+CLEAN="make clean"
+MAKE[0]="make -j$(nproc) KVER=${kernelver} KSRC=/lib/modules/${kernelver}/build"
+
+BUILT_MODULE_NAME[0]="memory_group_manager"
+BUILT_MODULE_LOCATION[0]="gpu/drivers/base/arm/memory_group_manager"
+DEST_MODULE_LOCATION[0]="/updates/dkms"
+
+BUILT_MODULE_NAME[1]="protected_memory_allocator"
+BUILT_MODULE_LOCATION[1]="gpu/drivers/base/arm/protected_memory_allocator"
+DEST_MODULE_LOCATION[1]="/updates/dkms"
+
+BUILT_MODULE_NAME[2]="mali_kbase"
+BUILT_MODULE_LOCATION[2]="gpu/drivers/gpu/arm/midgard"
+DEST_MODULE_LOCATION[2]="/updates/dkms"
+
+BUILT_MODULE_NAME[3]="amvx"
+BUILT_MODULE_LOCATION[3]="vpu/bin/aarch64-linux-gnu"
+DEST_MODULE_LOCATION[3]="/updates/dkms"
+
+BUILT_MODULE_NAME[4]="armcb_isp_v4l2"
+BUILT_MODULE_LOCATION[4]="isp"
+DEST_MODULE_LOCATION[4]="/updates/dkms"
+
+BUILT_MODULE_NAME[5]="aipu"
+BUILT_MODULE_LOCATION[5]="npu/driver"
+DEST_MODULE_LOCATION[5]="/updates/dkms"
+
+AUTOINSTALL=yes

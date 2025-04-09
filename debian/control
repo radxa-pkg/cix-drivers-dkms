@@ -1,0 +1,20 @@
+Source: cix-drivers-dkms
+Maintainer: "Radxa Computer Co., Ltd" <dev@radxa.com>
+Section: misc
+Priority: optional
+Standards-Version: 4.6.0
+Build-Depends: debhelper (>=12~),
+               devscripts,
+               dh-exec,
+               dh-sequence-dkms,
+               lintian
+
+Package: cix-drivers-dkms
+Architecture: all
+Section: misc
+Priority: optional
+Depends: dkms,
+         scons,
+         ${misc:Depends},
+Description: dkms sources for CIX XPU drivers
+ This package provides the dkms source code for CIX XPU driver.

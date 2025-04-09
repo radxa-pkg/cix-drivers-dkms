@@ -1,0 +1,5 @@
+build: fix_file_permissions
+
+.PHONY: fix_file_permissions
+fix_file_permissions:
+	chmod -R -x+X src

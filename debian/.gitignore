@@ -1,9 +1,8 @@
 /.debhelper
 /debhelper-build-stamp
 /files
-/linux-*/
-/u-boot-*/
+/cix-drivers-dkms/
 /*.debhelper.log
-/*.postrm.debhelper
+/*.*.debhelper
 /*.substvars
 /tmp
