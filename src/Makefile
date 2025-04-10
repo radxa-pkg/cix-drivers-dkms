@@ -28,15 +28,15 @@ vpu/bin/aarch64-linux-gnu/amvx.ko:
 	scons -j$(shell nproc) -C vpu
 
 isp/armcb_isp_v4l2.ko:
-	ln -sf $(KSRC) linux
+	ln -sf $(KDIR) linux
 	cd isp && $(MAKE) -C . build \
 		PATH_ROOT=$(PWD) \
 		ARCH=arm64 \
 		CROSS_COMPILE=
 
 npu/driver/aipu.ko:
-	cd npu/driver && $(MAKE) -C $(KSRC) M=$(PWD)/npu/driver modules \
-		COMPASS_DRV_BTENVAR_KPATH=$(KSRC) \
+	cd npu/driver && $(MAKE) -C $(KDIR) M=$(PWD)/npu/driver modules \
+		COMPASS_DRV_BTENVAR_KPATH=$(KDIR) \
 		BUILD_AIPU_VERSION_KMD=BUILD_ZHOUYI_V3 \
 		COMPASS_DRV_BTENVAR_KMD_VERSION=5.8.0 \
 		BUILD_TARGET_PLATFORM_KMD=BUILD_PLATFORM_SKY1 \
