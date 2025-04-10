@@ -13,6 +13,10 @@ Package: cix-drivers-dkms
 Architecture: all
 Section: misc
 Priority: optional
+Provides: cix-gpu-driver,
+          cix-isp-driver-v4l2,
+          cix-npu-driver,
+          cix-vpu-driver,
 Depends: dkms,
          scons,
          ${misc:Depends},
