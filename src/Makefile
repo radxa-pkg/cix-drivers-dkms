@@ -1,10 +1,14 @@
-all:
-	$(MAKE) -C gpu/drivers/gpu/arm \
-		CONFIG_MALI_BASE_MODULES=y \
-		CONFIG_MALI_PLATFORM_NAME="sky1" \
-		CONFIG_MALI_CSF_SUPPORT=y \
-		CONFIG_MALI_CIX_POWER_MODEL=y
+targets := gpu/drivers/base/arm/memory_group_manager/memory_group_manager.ko \
+		   gpu/drivers/base/arm/protected_memory_allocator/protected_memory_allocator.ko \
+		   gpu/drivers/gpu/arm/midgard/mali_kbase.ko \
+		   vpu/bin/aarch64-linux-gnu/amvx.ko \
+		   isp/armcb_isp_v4l2.ko \
+		   npu/driver/aipu.ko
 
+all: $(targets)
+
+gpu/drivers/base/arm/memory_group_manager/memory_group_manager.ko \
+gpu/drivers/base/arm/protected_memory_allocator/protected_memory_allocator.ko &:
 	$(MAKE) -C gpu/drivers/base/arm \
 		CONFIG_MALI_BASE_MODULES=y \
 		CONFIG_MALI_PLATFORM_NAME="sky1" \
@@ -13,14 +17,24 @@ all:
 		CONFIG_MALI_PROTECTED_MEMORY_ALLOCATOR=y \
 		CONFIG_MALI_CIX_POWER_MODEL=y
 
+gpu/drivers/gpu/arm/midgard/mali_kbase.ko:
+	$(MAKE) -C gpu/drivers/gpu/arm \
+		CONFIG_MALI_BASE_MODULES=y \
+		CONFIG_MALI_PLATFORM_NAME="sky1" \
+		CONFIG_MALI_CSF_SUPPORT=y \
+		CONFIG_MALI_CIX_POWER_MODEL=y
+
+vpu/bin/aarch64-linux-gnu/amvx.ko:
 	scons -j$(shell nproc) -C vpu
 
+isp/armcb_isp_v4l2.ko:
 	ln -sf $(KSRC) linux
 	cd isp && $(MAKE) -C . build \
 		PATH_ROOT=$(PWD) \
 		ARCH=arm64 \
 		CROSS_COMPILE=
 
+npu/driver/aipu.ko:
 	cd npu/driver && $(MAKE) -C $(KSRC) M=$(PWD)/npu/driver modules \
 		COMPASS_DRV_BTENVAR_KPATH=$(KSRC) \
 		BUILD_AIPU_VERSION_KMD=BUILD_ZHOUYI_V3 \
