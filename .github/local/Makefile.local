@@ -3,3 +3,4 @@ build: fix_file_permissions
 .PHONY: fix_file_permissions
 fix_file_permissions:
 	chmod -R -x+X src
+	chmod -R -x+X firmware/cix_proprietary-debs/cix-vpu-umd/usr/lib/firmware

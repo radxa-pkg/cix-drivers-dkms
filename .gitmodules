@@ -14,3 +14,7 @@
 	path = src/vpu
 	url = https://gitlab.com/cix-linux/cix_opensource/vpu_driver.git
 	branch = 874c4/bbdf2/cix_beta2_radxa_dev
+[submodule "firmware"]
+	path = firmware
+	url = https://gitlab.com/cix-linux/cix_proprietary/cix_proprietary.git
+	branch = 874c4/bbdf2/cix_beta2_radxa_dev

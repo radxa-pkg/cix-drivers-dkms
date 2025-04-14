@@ -1,3 +1,4 @@
 #!/usr/bin/dh-exec
 
 src/* usr/src/cix-drivers-dkms-${DEB_VERSION}/
+firmware/cix_proprietary-debs/cix-vpu-umd/usr/lib /
