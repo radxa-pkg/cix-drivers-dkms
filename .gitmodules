@@ -1,20 +1,20 @@
 [submodule "src/gpu"]
 	path = src/gpu
 	url = https://gitlab.com/cix-linux/cix_opensource/gpu_kernel.git
-	branch = 874c4/bbdf2/cix_beta2_radxa_dev
+	branch = 874c4/78b98/cix_p1_radxa_acpi_beta_dev
 [submodule "src/isp"]
 	path = src/isp
 	url = https://gitlab.com/cix-linux/cix_opensource/isp_driver.git
-	branch = 874c4/bbdf2/cix_beta2_radxa_dev
+	branch = 874c4/78b98/cix_p1_radxa_acpi_beta_dev
 [submodule "src/npu"]
 	path = src/npu
 	url = https://gitlab.com/cix-linux/cix_opensource/npu_driver.git
-	branch = 874c4/bbdf2/cix_beta2_radxa_dev
+	branch = 874c4/78b98/cix_p1_radxa_acpi_beta_dev
 [submodule "src/vpu"]
 	path = src/vpu
 	url = https://gitlab.com/cix-linux/cix_opensource/vpu_driver.git
-	branch = 874c4/bbdf2/cix_beta2_radxa_dev
+	branch = 874c4/78b98/cix_p1_radxa_acpi_beta_dev
 [submodule "firmware"]
 	path = firmware
 	url = https://gitlab.com/cix-linux/cix_proprietary/cix_proprietary.git
-	branch = 874c4/bbdf2/cix_beta2_radxa_dev
+	branch = 874c4/78b98/cix_p1_radxa_acpi_beta_dev
