@@ -8,21 +8,9 @@ targets := gpu/drivers/base/arm/memory_group_manager/memory_group_manager.ko \
 all: $(targets)
 
 gpu/drivers/base/arm/memory_group_manager/memory_group_manager.ko \
-gpu/drivers/base/arm/protected_memory_allocator/protected_memory_allocator.ko &:
-	$(MAKE) -C gpu/drivers/base/arm \
-		CONFIG_MALI_BASE_MODULES=y \
-		CONFIG_MALI_PLATFORM_NAME="sky1" \
-		CONFIG_MALI_CSF_SUPPORT=y \
-		CONFIG_MALI_MEMORY_GROUP_MANAGER=y \
-		CONFIG_MALI_PROTECTED_MEMORY_ALLOCATOR=y \
-		CONFIG_MALI_CIX_POWER_MODEL=y
-
-gpu/drivers/gpu/arm/midgard/mali_kbase.ko:
-	$(MAKE) -C gpu/drivers/gpu/arm \
-		CONFIG_MALI_BASE_MODULES=y \
-		CONFIG_MALI_PLATFORM_NAME="sky1" \
-		CONFIG_MALI_CSF_SUPPORT=y \
-		CONFIG_MALI_CIX_POWER_MODEL=y
+gpu/drivers/base/arm/protected_memory_allocator/protected_memory_allocator.ko \
+gpu/drivers/gpu/arm/midgard/mali_kbase.ko &:
+	$(MAKE) -C gpu all
 
 vpu/bin/aarch64-linux-gnu/amvx.ko:
 	scons -j$(shell nproc) -C vpu
@@ -43,8 +31,7 @@ npu/driver/aipu.ko:
 		BUILD_NPU_DEVFREQ=y
 
 clean:
-	$(MAKE) -C gpu/drivers/gpu/arm clean
-	$(MAKE) -C gpu/drivers/base/arm clean
+	$(MAKE) -C gpu clean
 	scons -C vpu --clean
 	$(MAKE) -C isp clean
 	$(MAKE) -C npu/driver clean
