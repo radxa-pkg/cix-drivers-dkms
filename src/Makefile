@@ -13,7 +13,7 @@ gpu/drivers/gpu/arm/midgard/mali_kbase.ko &:
 	$(MAKE) -C gpu all
 
 vpu/bin/aarch64-linux-gnu/amvx.ko:
-	scons -j$(shell nproc) target=linux
+	scons -j$(shell nproc) -C vpu target=linux
 
 isp/armcb_isp_v4l2.ko:
 	ln -sf $(KDIR) linux
