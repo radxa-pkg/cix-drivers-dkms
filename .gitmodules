@@ -5,7 +5,7 @@
 [submodule "src/isp"]
 	path = src/isp
 	url = https://gitlab.com/cix-linux/cix_opensource/isp_driver.git
-	branch = ee8f6/48bff/cix_p1_K6.6_2025Q3_dev
+	branch = ee8f6/48bff/cix_p1_K6.6_2025Q4_dev
 [submodule "src/npu"]
 	path = src/npu
 	url = https://gitlab.com/cix-linux/cix_opensource/npu_driver.git
@@ -17,4 +17,4 @@
 [submodule "firmware"]
 	path = firmware
 	url = https://gitlab.com/cix-linux/cix_proprietary/cix_proprietary.git
-	branch = ee8f6/48bff/cix_p1_K6.6_2025Q3_dev
+	branch = ee8f6/48bff/cix_p1_K6.6_2025Q4_dev
