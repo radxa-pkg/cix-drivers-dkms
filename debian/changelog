@@ -1,3 +1,13 @@
+cix-drivers-dkms (0.2.1-4) unstable; urgency=medium
+
+  [ Zhaoming Luo ]
+  * feat: update the submodules to 2025Q4
+
+  [ github-actions[bot] ]
+  * chore: update submodules
+
+ -- "Radxa Computer Co., Ltd" <dev@radxa.com>  Thu, 05 Mar 2026 11:40:36 +0000
+
 cix-drivers-dkms (0.2.1-3) unstable; urgency=medium
 
   [ github-actions[bot] ]
