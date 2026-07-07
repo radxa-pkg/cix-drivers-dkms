@@ -1,20 +1,20 @@
 [submodule "src/gpu"]
 	path = src/gpu
-	url = https://gitlab.com/cix-linux/cix_opensource/gpu_kernel.git
-	branch = ee8f6/48bff/cix_p1_K6.6_2025Q3_dev
+	url = https://github.com/cixtech/cix_opensource__gpu_kernel.git
+	branch = cix_k6.6.89_2026q2
 [submodule "src/isp"]
 	path = src/isp
-	url = https://gitlab.com/cix-linux/cix_opensource/isp_driver.git
-	branch = ee8f6/48bff/cix_p1_K6.6_2025Q4_dev
+	url = https://github.com/cixtech/cix_opensource__isp_driver.git
+	branch = cix_k6.6.89_2026q2
 [submodule "src/npu"]
 	path = src/npu
-	url = https://gitlab.com/cix-linux/cix_opensource/npu_driver.git
-	branch = ee8f6/48bff/cix_p1_K6.6_2025Q3_dev
+	url = https://github.com/cixtech/cix_opensource__npu_driver.git
+	branch = cix_k6.6.89_2026q2
 [submodule "src/vpu"]
 	path = src/vpu
-	url = https://gitlab.com/cix-linux/cix_opensource/vpu_driver.git
-	branch = ee8f6/48bff/cix_p1_K6.6_2025Q3_dev
+	url = https://github.com/cixtech/cix_opensource__vpu_driver.git
+	branch = cix_k6.6.89_2026q2
 [submodule "firmware"]
 	path = firmware
-	url = https://gitlab.com/cix-linux/cix_proprietary/cix_proprietary.git
-	branch = ee8f6/48bff/cix_p1_K6.6_2025Q4_dev
+	url = https://github.com/cixtech/cix_proprietary__cix_proprietary.git
+	branch = cix_k6.6.89_2026q2
