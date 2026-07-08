@@ -7,3 +7,4 @@
 1. `git clone --recurse-submodules https://github.com/radxa-pkg/cix-drivers-dkms.git`
 2. Open in [`devcontainer`](https://code.visualstudio.com/docs/devcontainers/containers)
 3. `make deb`
+
