@@ -1,3 +1,11 @@
+cix-drivers-dkms (0.2.2-1) UNRELEASED; urgency=medium
+
+  [ ZHANG Yuntian ]
+  * Add files via upload
+  * chore: update submodules to 26Q2
+
+ -- "Radxa Computer Co., Ltd" <dev@radxa.com>  Wed, 08 Jul 2026 07:16:17 +0000
+
 cix-drivers-dkms (0.2.1-4) unstable; urgency=medium
 
   [ Zhaoming Luo ]
